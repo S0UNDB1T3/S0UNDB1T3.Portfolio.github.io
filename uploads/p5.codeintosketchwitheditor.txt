@@ -1,0 +1,92 @@
+-----
+
+let rand =100;
+let t0 = 156;
+let t1 = 130;
+let t2 = 100;
+function setup() {
+  createCanvas(600, 600);
+}
+
+function draw() {
+  background(random(t0),random(t1),random(t2));
+// hoodie
+  fill(0,0,255)
+  rect(340, 505, 200, 360, 330, 470);
+  //Hair
+  noStroke()
+  fill(0);
+  arc(340, 340, 300, 380, QUARTER_PI + HALF_PI, QUARTER_PI, OPEN);
+
+  //Face 
+  strokeWeight(5);
+  fill(217, 155, 93);
+  ellipse(340, 335, 200, 260);
+
+  //Ears
+  arc(230, 355, 40, 60, 0, PI + HALF_PI, PI + HALF_PI, OPEN);
+  arc(450, 355, 40, 60, 0, PI + PI + HALF_PI, OPEN)
+
+  //hair curl
+  noStroke()
+  fill(0);
+  arc(380,230, 150, 150, 100, 0, PI + QUARTER_PI, CHORD);
+  arc(260, 200, 140, 148, 0, 0.75 * Math.PI);
+
+
+  //Eyebrows
+  stroke(21, 19, 19);
+  strokeWeight(8);
+  noFill();
+  arc(290, 325, 65, 25, PI, TWO_PI, OPEN);
+  arc(390, 325, 65, 25, PI, TWO_PI, OPEN);
+
+  //eyelid
+  stroke(0, 0, 0);
+  strokeWeight(3);
+  arc(290, 335, 45, 15, PI, TWO_PI, OPEN);
+  arc(390, 335, 45, 15, PI, TWO_PI, OPEN);
+  arc(290, 337, 40, 30, HALF_PI, PI);
+  arc(390, 337, 40, 30, 0, HALF_PI);
+
+  //Eyes
+  strokeWeight(1)
+  fill(0);
+  ellipse(290, 340, 28, 25);
+  ellipse(390, 340, 28, 25);
+
+  //Eyeballs
+  noStroke()
+  fill(255)
+  ellipse(287, 332, 10, 10);
+  ellipse(386, 332, 10, 10);
+
+  //Nose
+  fill(238, 176, 114 )
+  triangle(340, 350, 380, 380, 330, 380);
+
+  //Mouth
+  fill(255);
+  arc(340, 405, 49, 35, 0, PI);
+
+  //Hoodie
+  rectMode(CENTER)
+  fill(255);
+  rect(340, 550, 205, 150, 20);
+  fill(0,0,255)
+  triangle(215, 515, 250, 440, 410, 550);
+  triangle(440, 460, 470, 540, 280, 515);
+  fill(0)
+  ellipse(380, 512, 15, 15);
+  ellipse(300, 512, 15, 15);
+  rect(380, 540, 8, 65, 20);
+  rect(300, 540, 8, 65, 20);
+
+
+  //Neck
+  fill(217, 155, 93);
+  rect(340, 460, 50, 55, 20);
+
+}
+
+(the background flashes colors)
